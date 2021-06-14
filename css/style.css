@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+:root {
+    --hover_color: #f00;
+    --header-color: rgb(22, 79, 155);
+    font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    list-style-type: none;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+section.container {
+    width: 100vw;
+    /* margin: auto 0; */
+    display: block;
+    height: 100%;
+    align-items: row;
+    background-image: linear-gradient(rgb(146, 214, 241), #fff);
+    box-shadow: 0 0 4rem rgb(157, 211, 247);
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+#logo {
+    display: block;
+    float: left;
+    position: relative;
+}
+
+p {
+    line-height: 2em;
+}
+
+
+/* main nav */
+
+header {
+    height: 6rem;
+    background: #fff;
+    filter: opacity(60%);
+    margin: 0 0 3.5em 0;
+    box-shadow: 0px 2px 1rem rgb(171, 219, 247);
+    box-shadow: inset 0px 2px 1rem rgb(171, 219, 247);
+}
+
+header section {
+    height: 100%;
+}
+
+header section nav {
+    height: 100%;
+}
+
+header section nav ul {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+header section nav ul li {
+    list-style: none;
+    height: 100%;
+}
+
+header section nav ul li:first-child {
+    margin: 0 1em 0 0;
+}
+
+header section nav ul li a {
+    list-style: none;
+    display: inline-block;
+    height: 100%;
+    padding: 1.3rem 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    margin: 0 1rem;
+    background: linear-gradient( to bottom, var(--background-color)0%, rgb(149, 155, 165) 100%);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    justify-content: center;
+    text-shadow: 2px 2px 2px #fff, -2px -2px 2px #fff;
+    /* text-shadow: 0px 1px 3px #fff, 3px 4px 4px #00f; */
+}
+
+header section nav ul li a:focus,
+header section nav ul li a:visited,
+header section nav ul li a:active {
+    color: #000;
+}
+
+header section nav ul li a.active {
+    text-shadow: 0px 1px 5px #fff, 0px 8px 0.3em#b34545, 0px -1px 5px #fff, 0px -5px 0.3em #eb3939;
+    color: #f00;
+    transform: scale(1.3);
+    filter: blur(0px);
+}
+
+header section nav ul li a:hover::after {
+    list-style: none;
+    transform: scaleX(1);
+    background-size: 1em 100%;
+    transform-origin: bottom left;
+}
+
+header section nav ul li a::after {
+    display: block;
+    content: " ";
+    position: relative;
+    top: 1em;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    width: 100%;
+    height: 1em;
+    background: rgba(49, 134, 231, 0.801);
+    filter: blur(4px);
+    box-shadow: 1px 1px 1em rgba(78, 155, 207, 0.925);
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+    z-index: -1;
+}
+
+
+/* breadcrumbs */
+
+section.breadcrumbs {
+    display: inline;
+    width: 100vw;
+    margin: 0 0 1em 0;
+}
+
+section.breadcrumbs ul {
+    list-style-type: none;
+    padding: 1em 1em;
+}
+
+section.breadcrumbs ul li {
+    display: block;
+    float: left;
+}
+
+section.breadcrumbs ul li a::before {
+    content: "> ";
+}
+
+section.breadcrumbs ul li a {
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #00f;
+    font-size: small;
+}
+
+section.breadcrumbs ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    position: static;
+    bottom: 0;
+}
+
+footer p {
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-shadow: 2px 2px 2px #fff, -2px -2px 2px #fff;
+    color: var(--header-color);
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* main styles */
+
+main {
+    padding: 1em;
+}
+
+main .title {
+    /* background-image: url("../img/craftsmen_scaffold_building.jpg"); */
+    background: url("https://images.all-free-download.com/images/graphiclarge/house_construction_maurer_craftsmen_264974.jpg") no-repeat;
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 30em;
+    filter: brightness(1.3);
+    border-radius: 10%;
+}
+
+.title h1 {
+    padding-top: 2em;
+    /* text-shadow: 1px 1px 10px #000, 0px -1px 10px #000, -1px -1px 10px #f00, 0px 1px 10px #f00; */
+}
+
+.title h2 {
+    margin: 1em;
+    text-align: center;
+}
+
+.row {
+    display: inline;
+    flex-wrap: wrap;
+}
+
+main .col {
+    width: 33%;
+    float: left;
+    display: block;
+}
+
+main .col figure {
+    margin: 0.3rem;
+}
+
+main .col h4 {
+    margin: 0.5em 0 -1em 1.5em;
+}
+
+main .col p {
+    margin: 1em;
+    padding: 0.5em;
+    text-align: left;
+}
+
+main h2 {
+    margin: 1em;
+    padding: 0 auto;
+    text-align: center;
+}
+
+main h3 {
+    padding: 0 auto;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+
+/* health and safety */
+
+.article {
+    padding: 2em;
+}
+
+.article ol ul {
+    list-style-type: square;
+}
+
+.article ol ul li {
+    margin-left: 3em;
+}
+
+
+/* contact */
+
+article #map {
+    min-height: 25rem;
+    width: 86%;
+    margin: 1em auto;
+}
+
+#map iframe {
+    width: 100%;
+}
+
+dt,
+dd {
+    line-height: 2.5em;
+    text-align: center;
+    font-size: 1em;
+}
+
+dd {
+    text-align: center;
+}
+
+#contact-form {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#contact-form label {
+    display: inline;
+    width: 100%;
+    min-height: 2em;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 1em auto;
+    border: none;
+    border-bottom: 2px solid linear-gradient(to bottom, #fff, rgb(245, 149, 149));
+}
+
+form textarea {
+    display: inline;
+    width: 100%;
+}
+
+form input[type="submit"] {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    border-radius: 0.4em;
+    width: 30%;
+    float: right;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: linear-gradient(to bottom, #f00, #9c3838);
+}
+
+
+/* shop */
+
+table#products {
+    border-collapse: collapse;
+}
+
+#products td,
+#products th {
+    border: solid 1px #ccc;
+    padding: 0.8em;
+}
+
+#products tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#products tr:hover {
+    background-color: #ddd;
+}
+
+#products tbody strong {
+    margin-bottom: 1em;
+    display: block;
+}
+
+#products th {
+    background: linear-gradient( to bottom, #f00, #9c3838);
+    color: white;
+    text-shadow: 1px 1px #000;
+}
+
+#products th:hover {
+    background: linear-gradient( to bottom, #9c3838, #f00);
+}
+
+@media only screen and (max-width: 768px) {
+    /* for mobile devices */
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    body .container {
+        width: 100%;
+    }
+    header {
+        height: auto;
+    }
+    #logo {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+    #logo a {
+        height: 100px;
+        width: 100px;
+        display: inline-block;
+    }
+    #logo a img {
+        height: 100px;
+        width: 100px;
+        display: block;
+    }
+    nav {
+        position: relative;
+        display: inline-block;
+    }
+    nav ul li,
+    nav ul li a {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    section .breadcrumbs {
+        display: none;
+    }
+    /* home */
+    .title h1 {
+        width: 100%;
+        display: inline-block;
+        font-size: 2em;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    p.desc {
+        font-size: 0.8em;
+    }
+    /* shop */
+    #products {
+        display: block;
+        margin-left: -20%;
+    }
+    #products tbody strong,
+    #products tbody label {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+    }
+    #products input[type="number"] {
+        width: 80%;
+    }
+    /* {
+        display: inline;
+        width: 100%;
+    }
+    body {
+        width: 100%;
+        display: block;
+        background: yellow;
+    }
+    header section #logo {
+        width: 100%;
+        border: 1px solid red;
+        height: 7em;
+    }
+    header section #logo a {
+        height: auto;
+        width: 100%;
+        display: block;
+        margin: 1em;
+    }
+    header section #logo a img {
+        display: inline-block;
+        height: 7em;
+    }
+    header section nav ul {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    header section nav ul li {
+        display: inline;
+        width: 100%;
+        flex-basis: 100%;
+        text-align: center;
+        
+    }
+    header section nav ul li a {
+        display: inline;
+        width: 100%;
+        padding: 25px;
+        border: 2px solid green;
+    } */
+}
