@@ -461,7 +461,7 @@ table#products {
     /* shop */
     #products {
         display: block;
-        margin-left: -20%;
+        margin-left: -10%;
     }
     #products tbody strong,
     #products tbody label {
