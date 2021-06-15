@@ -394,6 +394,7 @@ table#products {
     margin-bottom: 1em;
     display: block;
 }
+
 #products img {
     width: 100%;
     height: auto;
@@ -467,8 +468,9 @@ table#products {
         display: block;
         width: 95vw;
         margin-left: -2.8em;
+        /* margin-left: -20%; */
     }
-     #products img {
+    #products img {
         width: 100%;
         height: auto;
     }
@@ -480,5 +482,46 @@ table#products {
     #products input[type="number"] {
         width: 80%;
     }
-   
+    /* {
+        display: inline;
+        width: 100%;
+    }
+    body {
+        width: 100%;
+        display: block;
+        background: yellow;
+    }
+    header section #logo {
+        width: 100%;
+        border: 1px solid red;
+        height: 7em;
+    }
+    header section #logo a {
+        height: auto;
+        width: 100%;
+        display: block;
+        margin: 1em;
+    }
+    header section #logo a img {
+        display: inline-block;
+        height: 7em;
+    }
+    header section nav ul {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    header section nav ul li {
+        display: inline;
+        width: 100%;
+        flex-basis: 100%;
+        text-align: center;
+        
+    }
+    header section nav ul li a {
+        display: inline;
+        width: 100%;
+        padding: 25px;
+        border: 2px solid green;
+    } */
 }
