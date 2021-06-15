@@ -394,6 +394,10 @@ table#products {
     margin-bottom: 1em;
     display: block;
 }
+#products img {
+    width: 100%;
+    height: auto;
+}
 
 #products th {
     background: linear-gradient( to bottom, #f00, #9c3838);
@@ -463,6 +467,10 @@ table#products {
         display: block;
         width: 95vw;
         margin-left: -2.8em;
+    }
+     #products img {
+        width: 100%;
+        height: auto;
     }
     #products tbody strong,
     #products tbody label {
